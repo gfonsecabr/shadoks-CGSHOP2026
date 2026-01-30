@@ -14,4 +14,4 @@ cmake .
 make
 ```
 
-Dependencies like EvalMAXSat, CaDiCal, and cxxopts are included.
+Dependencies like EvalMAXSat, CaDiCal, and cxxopts are included. Check description.pdf for a description of the algorithms and heuristics used.
