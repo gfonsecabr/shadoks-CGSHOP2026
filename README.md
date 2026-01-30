@@ -14,4 +14,4 @@ cmake .
 make
 ```
 
-Dependencies like EvalMAXSat atn CaDiCal are included.
+Dependencies like EvalMAXSat, CaDiCal, and cxxopts are included.
