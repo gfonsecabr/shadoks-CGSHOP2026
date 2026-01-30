@@ -14,4 +14,4 @@ cmake .
 make
 ```
 
-Dependencies like [CaDiCal](https://fmv.jku.at/cadical/), [EvalMAXSat](https://github.com/FlorentAvellaneda/EvalMaxSAT), and [cxxopts](https://github.com/jarro2783/cxxopts) are included. Check [description.pdf](description.pdf) for a description of the algorithms and heuristics used.
+Dependencies like [CaDiCal](https://github.com/arminbiere/cadical?tab=readme-ov-file), [EvalMAXSat](https://github.com/FlorentAvellaneda/EvalMaxSAT), and [cxxopts](https://github.com/jarro2783/cxxopts) are included. Check [description.pdf](description.pdf) for a description of the algorithms and heuristics used.
