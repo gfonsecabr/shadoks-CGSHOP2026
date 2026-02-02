@@ -3,15 +3,15 @@ Reconfiguration of triangulations with parallel flips
 
 Shadoks solvers of the CG:SHOP 2026 competition.
 
- - exact: Produces exact solutions
- - solver: Produces initial solution
- - improver: Improves an existing solution
- - makelb: Creates the "lb.txt" file that solver and improver use
+ - ``exact``: Produces exact solutions
+ - ``solver``: Produces initial solution
+ - ``improver``: Improves an existing solution
+ - ``makelb``: Creates the "lb.txt" file that solver and improver use
 
-Linux static precompiled binaries are included. To compile, run
+Linux static precompiled binaries are included, and also a fairly large ``lb.txt`` file. To compile, run
 ```
 cmake .
 make
 ```
 
-Dependencies like EvalMAXSat, CaDiCal, and cxxopts are included. Check description.pdf for a description of the algorithms and heuristics used.
+Dependencies like [CaDiCal](https://github.com/arminbiere/cadical?tab=readme-ov-file), [EvalMAXSat](https://github.com/FlorentAvellaneda/EvalMaxSAT), and [cxxopts](https://github.com/jarro2783/cxxopts) are included. Check [description.pdf](description.pdf) for a description of the algorithms and heuristics used.
