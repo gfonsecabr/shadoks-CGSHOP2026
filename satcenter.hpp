@@ -335,7 +335,7 @@ public:
       // Edges uv is flipped into u2v2 at time t+1
       if(edgeVars.contains({uv,t+1,i}))
         clauses.push_back({ -var, -edgeVars.at({uv,t+1,i}) });
-      clauses.push_back({ -var, edgeVars.at({u2v2,t+1,i}) });
+      // clauses.push_back({ -var, edgeVars.at({u2v2,t+1,i}) });
     }
 
     // Data structures
