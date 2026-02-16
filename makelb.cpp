@@ -498,12 +498,8 @@ int lbOneWay(std::vector<int> oc1) {
   }
 
   while (!oc1.empty()) {
-    auto it = presolved.find(oc1);
-    if (it != presolved.end()) {
-      return it->second + countflips - 1;
-    }
     cutborders(oc1);
-    it = presolved.find(oc1);
+    auto it = presolved.find(oc1);
     if (it != presolved.end()) {
       return it->second + countflips - 1;
     }
@@ -694,7 +690,7 @@ static std::vector<SpecialEntry> bfs(int b0, int b1) {
         std::vector<int> oc0 = convert_integer(m);
 
         // check whether log2(s+2) fits with heuristic
-        int score = lb(oc0);
+        int score = lbOneWay(oc0);
 
         int s = 0;
         for (int x : oc0) s += x;
@@ -755,7 +751,7 @@ static std::vector<SpecialEntry> bfs(int b0, int b1) {
 
                         // our new word is computed
                         std::vector<int> octemp = translate_word_to_multiplicities(word);
-                        int newscore = lb(octemp);
+                        int newscore = lbOneWay(octemp);
 
                         if (newscore + 1 < score) {
                             if (newscore < score - 2) {
@@ -821,7 +817,7 @@ int main(int argc, char **argv) {
     std::string filename = "lb.txt";
     std::cout << "Removing " << filename << std::endl;
     unlink(filename.c_str());
-    int c = 24; // we deal with segments having at most c crossings
+    int c = 27; // we deal with segments having at most c crossings
 
     if(argc >= 2)
       c = atoi(argv[1]);

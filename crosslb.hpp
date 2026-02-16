@@ -484,12 +484,8 @@ public:
     }
 
     while (!oc1.empty()) {
-      auto it = presolved.find(oc1);
-      if (it != presolved.end()) {
-        return it->second + countflips - 1;
-      }
       cutborders(oc1);
-      it = presolved.find(oc1);
+      auto it = presolved.find(oc1);
       if (it != presolved.end()) {
         return it->second + countflips - 1;
       }
