@@ -45,6 +45,7 @@ include_directories(lib)
 add_executable(solver solver.cpp)
 add_executable(improver improver.cpp)
 add_executable(exact exact.cpp)
+add_executable(happy happy.cpp)
 add_executable(makelb makelb.cpp)
 
 target_link_libraries(solver
@@ -58,6 +59,11 @@ target_link_libraries(improver
 )
 
 target_link_libraries(exact
+    ${localLibs}
+    ${externLibs}
+)
+
+target_link_libraries(happy
     ${localLibs}
     ${externLibs}
 )
